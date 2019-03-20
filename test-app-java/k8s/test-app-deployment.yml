@@ -23,7 +23,7 @@ spec:
       # imagePullSecrets:
       # - name: registry-secret
       containers:
-      - image: localhost:5000/java/test-app-java:master
+      - image: 10.109.154.202:4567/root/test-app-java:master
         imagePullPolicy: Always
         name: helloworld
         ports:

@@ -85,3 +85,13 @@ openssl req -new -x509 -keyout tls.key -out tls.crt -days 3650 -nodes
 kubectl create secret generic local-wildcard --namespace kube-system --from-file=tls.crt="./tls.crt" \
 --from-file=tls.key="./tls.key"
 ~~~
+
+### Creation roles 
+~~~
+kubectl create clusterrolebinding --user system:serviceaccount:default:default default-sa-admin --clusterrole cluster-admin
+~~~
+
+### Creation secret per deploy da custom registry 
+~~~
+kubectl create secret docker-registry regcred --docker-server=10.109.154.202:4567 --docker-username=root --docker-password=UtM-5ov-2um-5Ho
+~~~

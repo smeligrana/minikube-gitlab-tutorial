@@ -10,6 +10,9 @@ spec:
   - name: "80"
     port: 80
     targetPort: 80
+  - name: "4567"
+    port: 4567
+    targetPort: 4567
   selector:
     service: gitlab
 status:
